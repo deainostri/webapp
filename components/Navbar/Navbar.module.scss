@@ -1,0 +1,51 @@
+.root {
+    @apply mx-auto py-4;
+}
+
+.navbar-content {
+    @apply flex items-center justify-between relative;
+}
+
+.navbar-social__button {
+    @apply flex items-center;
+}
+
+.navbar-items {
+    @apply flex items-center justify-between;
+
+    .navbar-links {
+        @apply flex items-center justify-between space-x-2;
+    }
+}
+
+.navbar-mobile-connect {
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 1010px) {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1011px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-mobile-connect {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .navbar-items {
+        .navbar-links {
+            display: none;
+        }
+    }
+}

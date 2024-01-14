@@ -1,0 +1,62 @@
+.root {
+    @apply flex flex-row justify-center items-center;
+}
+
+.cta {
+    @apply bg-pallete-primary text-white font-semibold rounded-lg;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-pallete-primary focus:ring-offset-black focus:ring-opacity-75;
+}
+
+.cta-disabled {
+    @apply bg-gray-400 text-white font-semibold rounded-lg cursor-default;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:bg-gray-400 focus:ring-offset-black focus:ring-opacity-75;
+}
+
+.quiet {
+    @apply hover:bg-gray-800 hover:text-white font-semibold rounded-lg;
+    @apply text-gray-800;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-75 outline-gray-700;
+}
+
+.primary {
+    @apply hover:bg-app-textheader hover:text-white text-app-textheader font-semibold rounded-4;
+    @apply bg-yellow-500 text-black;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-app-textheader focus:ring-opacity-75;
+}
+
+.secondary {
+    @apply text-pallete-primary font-semibold rounded-lg;
+    @apply border border-pallete-primary;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    background: #ffeec4;
+}
+
+.third {
+    @apply font-semibold rounded-lg text-white;
+    @apply py-3 px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    @apply bg-pallete-secondary;
+}
+
+.sm {
+    @apply text-xs;
+    @apply p-3;
+}
+
+.md {
+    @apply py-3 px-4;
+}
+
+.shadow {
+    width: 340px;
+    transition: box-shadow 125ms linear;
+
+    &:hover {
+        box-shadow: 5px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+}

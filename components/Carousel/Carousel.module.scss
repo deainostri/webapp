@@ -1,0 +1,11 @@
+.item {
+    @apply px-2;
+    
+    flex: 0 0 200px;
+}
+
+@media screen and (min-width: 768px) {
+    .item {
+        flex: 0 0 300px;
+    }
+}

@@ -1,0 +1,44 @@
+.toastsContainer {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+
+    @apply flex flex-col space-y-2;
+}
+
+.toast {
+    @apply p-2 text-xs flex flex-row items-center drop-shadow-2xl w-full text-app-textheader;
+
+    background: #f2f2f2;
+    border: 2px solid #fff;
+    border-radius: 8px;
+
+    max-width: 380px;
+
+    &.fail {
+        background: #c93939;
+        color: white;
+    }
+
+    &.success {
+        @apply bg-yellow-500;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .toastsContainer {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        bottom: unset;
+
+        @apply flex flex-col space-y-2;
+    }
+
+    .toast {
+        width: 100%;
+        max-width: unset;
+    }
+}

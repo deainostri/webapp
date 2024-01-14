@@ -1,0 +1,76 @@
+.tvContainer {
+    @apply self-stretch relative aspect-square lg:aspect-auto mt-10 lg:mt-0;
+    flex: 1 0 60%;
+    // padding-bottom: 100%;
+
+    .tvBg {
+        @apply w-full h-full absolute z-20;
+        background: url("/assets/images/tv-2.png") right bottom no-repeat;
+        background-size: contain;
+    }
+
+    .tvContent {
+        position: absolute;
+        top: 11%;
+        left: 27%;
+        width: 42%;
+        overflow: hidden;
+        transform: perspective(50cm) rotateX(-10deg) rotateY(-20deg) rotateZ(-10deg) scaleX(1.1);
+        @apply aspect-square;
+
+        img {
+            @apply absolute z-10;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// @media (min-width: 1536px) {
+//     .tvContainer {
+//         .tvContent {
+//             top: 11%;
+//             left: 40%;
+//             width: 33%;
+//         }
+//     }
+// }
+
+@media (max-width: 1278px) {
+    .tvContainer {
+        .tvContent {
+            top: 11%;
+            left: 8%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tvContainer {
+        .tvContent {    
+            top: 11%;
+            left: 9%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 491px) {
+    .tvContainer {
+        .tvContent {    
+            top: 11%;
+            left: 10%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tvContainer {
+        @apply self-center;
+        width: 80%;
+        max-width: 500%;
+    }
+}

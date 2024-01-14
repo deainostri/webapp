@@ -1,0 +1,60 @@
+.container {
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    color: white;
+    z-index: 2;
+
+    @apply text-2xl font-bold;
+}
+
+.splash {
+    display: none;
+    background-image: url(/assets/images/splash.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.mobilesplash {
+    z-index: 2;
+}
+
+.content {
+    @apply flex flex-col justify-center w-full z-10;
+    max-width: 80%;
+}
+
+.lol {
+    box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+}
+
+@media screen and (min-width: 768px) {
+    .mobilesplash {
+        display: none;
+    }
+
+    .splash {
+        display: block;
+        background-position: -30vw bottom;
+    }
+
+    .content {
+        position: absolute;
+        left: 75%;
+        bottom: 25%;
+        transform: translateX(-50%);
+        @apply max-w-sm;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .splash {
+        background-position: -15vw bottom;
+    }
+}

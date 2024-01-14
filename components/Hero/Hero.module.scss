@@ -1,0 +1,140 @@
+.root {
+    @apply relative flex flex-col md:justify-center pt-4 md:pt-0 items-center md:items-start text-center md:text-left;
+    // min-height: 600px;
+    /**height: 724px;**/
+
+    // background: url("/assets/images/test-bg.png") center bottom no-repeat;
+    // background-size: 100% auto;
+}
+
+@media (min-width: 426px) {
+    .root {
+        // background: url("/assets/images/test-bg.png") center bottom no-repeat;
+        // background-size: 100% auto;
+    }
+}
+
+@media (min-width: 1900px) {
+    .root {
+        background-size: auto 80%;
+    }
+}
+
+.teveu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+
+    img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1272px) {
+    .teveu {
+        height: 80%;
+    }
+}
+
+@media (max-width: 1042px) {
+    .teveu {
+        height: 60%;
+    }
+}
+
+@media (max-width: 1012px) {
+    .teveu {
+        max-width: 500px;
+        margin: 64px auto 0 auto !important;
+        position: relative;
+        margin: auto;
+    }
+}
+
+.wrapper {
+    @apply mx-auto overflow-hidden flex flex-col lg:flex-row items-center;
+    min-height: 600px;
+}
+
+.textContainer {
+    @apply flex flex-col space-y-4 overflow-hidden;
+    flex: 1 0 40%;
+}
+
+.tvContainer {
+    @apply self-stretch relative aspect-square lg:aspect-auto mt-10 lg:mt-0;
+    flex: 1 0 60%;
+    // padding-bottom: 100%;
+
+    .tvBg {
+        @apply w-full h-full absolute z-20;
+        background: url("/assets/images/tv-2.png") right bottom no-repeat;
+        background-size: contain;
+    }
+
+    .tvContent {
+        position: absolute;
+        top: 11%;
+        left: 27%;
+        width: 42%;
+        overflow: hidden;
+        transform: perspective(50cm) rotateX(-10deg) rotateY(-20deg) rotateZ(-10deg) scaleX(1.1);
+        @apply aspect-square;
+
+        img {
+            @apply absolute z-10;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// @media (min-width: 1536px) {
+//     .tvContainer {
+//         .tvContent {
+//             top: 11%;
+//             left: 40%;
+//             width: 33%;
+//         }
+//     }
+// }
+
+@media (max-width: 1278px) {
+    .tvContainer {
+        .tvContent {
+            top: 11%;
+            left: 8%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tvContainer {
+        .tvContent {    
+            top: 11%;
+            left: 9%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 491px) {
+    .tvContainer {
+        .tvContent {    
+            top: 11%;
+            left: 10%;
+            width: 52%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tvContainer {
+        @apply self-center;
+        width: 80%;
+        max-width: 500%;
+    }
+}

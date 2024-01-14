@@ -1,0 +1,27 @@
+.root {
+    margin-top: 128px;
+}
+
+.image {
+    background: url("/sazicem.png") right center / contain no-repeat;
+    flex: 1 1 0%;
+    max-width: 560px;
+    width: 100%;
+    height: 386px;
+    margin-left: 32px;
+}
+
+@media (max-width: 1024px) {
+    .root {
+        margin-top: 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .image {
+        flex: initial;
+        margin-left: 0px;
+        max-height: 300px;
+        background-position: center center;
+    }
+}

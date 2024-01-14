@@ -1,0 +1,31 @@
+.containerWrapper {
+    @apply container relative flex-1 flex;
+    @apply flex-col items-center justify-start py-6;
+}
+
+.contentContainer {
+    @apply w-full flex flex-col items-center overflow-hidden;
+
+    max-width: 80%;
+}
+
+.content {
+    @apply flex flex-col justify-center items-center space-y-2 bg-gray-800 p-4 rounded-lg drop-shadow-2xl overflow-hidden;
+}
+
+@media (min-width: 500px) {
+    .contentContainer {
+        max-width: 426px;
+    }
+}
+
+.headerImage {
+    @apply aspect-square;
+    
+    width: 80%;
+
+    background-image: url("/assets/images/whitelist_header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
